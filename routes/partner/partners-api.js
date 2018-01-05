@@ -14,8 +14,10 @@ router.get('/', function(req, res, next) {
 
 router.post('/add', function(req,res,next){
   var partner = new Partner();
+  partner.partner_id = req.body.partner_id;
   partner.name = req.body.name;
   partner.website = req.body.website;
+  partner.assign_territory = req.body.assign_territory;
 
   /*
   console.log(req.body.name);
