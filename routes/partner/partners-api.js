@@ -3,7 +3,6 @@ var Partner = require('../../model/partner');
 
 
 router.get('/', function(req, res, next) {
-  console.log('I am inside the partners-api.js file.');
   Partner.find({}, 'partner_id name website', function(err, partners) {
     if (err)
       res.send(err);
@@ -17,7 +16,7 @@ router.post('/add', function(req,res,next){
   partner.partner_id = req.body.partner_id;
   partner.name = req.body.name;
   partner.website = req.body.website;
-  partner.assign_territory = req.body.assign_territory;
+  partner.assigned_territory = req.body.assigned_territory;
 
   /*
   console.log(req.body.name);
