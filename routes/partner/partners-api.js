@@ -3,7 +3,7 @@ var Partner = require('../../model/partner');
 
 
 router.get('/', function(req, res, next) {
-  Partner.find({}, 'partner_id name website', function(err, partners) {
+  Partner.find({}, 'partner_id name website assigned_territory', function(err, partners) {
     if (err)
       res.send(err);
 
