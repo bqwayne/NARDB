@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
     if (err)
       res.send(err);
 
-    res.json(partners);
+    res.json({status: 200, results: partners});
   });
 });
 
@@ -28,7 +28,7 @@ router.post('/add', function(req,res,next){
 partner.save(function(err) {
   if (err)
     res.send(err);
-  res.json({message: 'Partner added!!', name: req.body.name, website: req.body.website});
+  res.json({status: 200, results: 'Partner added!!', name: req.body.name, website: req.body.website});
 });
 
 });
