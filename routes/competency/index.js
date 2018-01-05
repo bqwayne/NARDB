@@ -1,5 +1,5 @@
 var router = require('express').Router();
 
-//router.get('/competency', require('./partner-api'));
+//router.use('/', require('./competency-api'));
 
 module.exports = router;

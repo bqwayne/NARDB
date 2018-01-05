@@ -1,13 +1,14 @@
 var router = require('express').Router();
-var Pipeline = require('../../../model/pipeline');
+var Pipeline = require('../../model/pipeline');
 
 router.get('/', (req, res, next) => {
-    res.send('You have entered the pipeline find api.');
-})
+    res.json({status: 200, results: 'You have entered the pipeline find api.'});
+});
 
 router.get('/pipeline_detail', (req, res, next) => {
-    res.send('You have entered the pipeline find pipeline_detail api.');
-}) 
+    res.json({status: 200, results: 'You have entered the pipeline find pipeline_detail api.'});
+});
+
 router.get('/pipeline_detail/:field/:search', (req, res, next) => {
     let search = req.params.search;
     switch (req.params.field) {
@@ -76,7 +77,7 @@ router.get('/pipeline_detail/:field/:search', (req, res, next) => {
             })
             break;
         default:
-            res.json({status: 200, result: 'You did not provide a valide search field.  Currently implemented search fields are partner name and qtr.'});
+            res.json({status: 200, result: 'You did not provide a valid search field.  Currently implemented search fields are partner name and qtr.'});
             break;
     }
 });
