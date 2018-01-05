@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/myMongoDB');
+mongoose.connect('mongodb://localhost:27017/narDB');
 
 var Partner = require('./model/partner');
 var Booking = require('./model/booking');
