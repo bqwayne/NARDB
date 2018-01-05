@@ -61,4 +61,4 @@ typings/
 .next
 
 # Debug Output files
-*.out
+#*.out
