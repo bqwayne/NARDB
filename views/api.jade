@@ -3,3 +3,14 @@ extends layout
 block content
   h1= title
   p Welcome to the #{title} services. Provided by Bill.
+
+  p For more info use one of the following endpoints: 
+  p Partner: 
+    a(href='/apidoc/partner') /api/partner
+  p Booking: 
+    a(href='/apidoc/booking') /api/booking
+  p Pipeline: 
+    a(href='/apidoc/pipeline') /api/pipeline
+  p Pipeline Find: 
+    a(href='/apidoc/pipeline/find') /api/pipeline/find
+  p Competency: /api/competency

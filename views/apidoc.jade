@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Documentation for endpoint <strong>#{endpoint}</strong>
+  table
+    thead
+        td Method:
+        td Endpoint:
+        td Description:
+        td Results:
+    - each item in context
+        tr
+            td= item.method
+            td= item.endpoint
+            td= item.description
+            td= item.results
